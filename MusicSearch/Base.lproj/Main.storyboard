@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MusicSearch" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,89 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Music Search" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x00-pt-uvA">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="130"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="Meo-sC-K4S"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EtJ-zh-R9L">
+                                <rect key="frame" x="175" y="180" width="250" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="pq8-th-L8h"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eny-v6-REs">
+                                <rect key="frame" x="257" y="226" width="86" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Start Search"/>
+                                <connections>
+                                    <action selector="searchForMusic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QhG-Qs-vb1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search Results" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqM-AG-yg4">
+                                <rect key="frame" x="243" y="293" width="114" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FGu-JC-sJV">
+                                <rect key="frame" x="0.0" y="322" width="600" height="250"/>
+                                <animations/>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="cUI-hT-PKz">
+                                <rect key="frame" x="281" y="563" width="39" height="37"/>
+                                <animations/>
+                                <color key="pageIndicatorTintColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </pageControl>
+                        </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cUI-hT-PKz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1od-Da-7pl"/>
+                            <constraint firstItem="EtJ-zh-R9L" firstAttribute="top" secondItem="x00-pt-uvA" secondAttribute="bottom" constant="50" id="42h-gF-qVE"/>
+                            <constraint firstItem="EtJ-zh-R9L" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6pt-Nx-0e7"/>
+                            <constraint firstItem="Eny-v6-REs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8Q9-S7-CCn"/>
+                            <constraint firstItem="FGu-JC-sJV" firstAttribute="top" secondItem="iqM-AG-yg4" secondAttribute="bottom" constant="8" symbolic="YES" id="AaB-pV-5e3"/>
+                            <constraint firstItem="cUI-hT-PKz" firstAttribute="centerX" secondItem="FGu-JC-sJV" secondAttribute="centerX" id="AfU-Q6-m9l"/>
+                            <constraint firstItem="FGu-JC-sJV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="322" id="ELu-Bc-3mh"/>
+                            <constraint firstItem="cUI-hT-PKz" firstAttribute="centerX" secondItem="Eny-v6-REs" secondAttribute="centerX" id="FLU-zx-KDV"/>
+                            <constraint firstItem="x00-pt-uvA" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="MMF-NP-FEi"/>
+                            <constraint firstItem="cUI-hT-PKz" firstAttribute="centerX" secondItem="iqM-AG-yg4" secondAttribute="centerX" id="MZE-Cr-B9E"/>
+                            <constraint firstItem="cUI-hT-PKz" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="hA8-Sl-bQa"/>
+                            <constraint firstItem="Eny-v6-REs" firstAttribute="top" secondItem="EtJ-zh-R9L" secondAttribute="bottom" constant="16" id="iJi-wD-w1L"/>
+                            <constraint firstAttribute="trailing" secondItem="x00-pt-uvA" secondAttribute="trailing" id="jbz-Ce-VeN"/>
+                            <constraint firstItem="x00-pt-uvA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mCG-9y-7BA"/>
+                            <constraint firstItem="iqM-AG-yg4" firstAttribute="top" secondItem="Eny-v6-REs" secondAttribute="bottom" constant="37" id="ozy-KJ-k5G"/>
+                            <constraint firstItem="FGu-JC-sJV" firstAttribute="leading" secondItem="x00-pt-uvA" secondAttribute="leading" id="ssi-me-IOY"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="FGu-JC-sJV" secondAttribute="bottom" constant="28" id="vjx-S4-y9c"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="1od-Da-7pl"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="pageIndicator" destination="cUI-hT-PKz" id="7WA-If-wCd"/>
+                        <outlet property="scrollView" destination="FGu-JC-sJV" id="wTS-U6-uRY"/>
+                        <outlet property="searchTextField" destination="EtJ-zh-R9L" id="zNT-Vp-yxB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="434" y="360"/>
         </scene>
     </scenes>
 </document>

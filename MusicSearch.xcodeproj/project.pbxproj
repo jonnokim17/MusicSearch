@@ -12,6 +12,10 @@
 		9020B1D11BE487650089176C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9020B1CF1BE487650089176C /* Main.storyboard */; };
 		9020B1D31BE487650089176C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9020B1D21BE487650089176C /* Assets.xcassets */; };
 		9020B1D61BE487650089176C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9020B1D41BE487650089176C /* LaunchScreen.storyboard */; };
+		9020B1DE1BE487B40089176C /* iTunesConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9020B1DD1BE487B40089176C /* iTunesConnection.swift */; };
+		9020B1E01BE48B560089176C /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9020B1DF1BE48B560089176C /* Album.swift */; };
+		9020B1E31BE4931F0089176C /* MusicView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9020B1E21BE4931F0089176C /* MusicView.xib */; };
+		9020B1E51BE4933E0089176C /* MusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9020B1E41BE4933E0089176C /* MusicView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		9020B1D21BE487650089176C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9020B1D51BE487650089176C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9020B1D71BE487650089176C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9020B1DD1BE487B40089176C /* iTunesConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iTunesConnection.swift; sourceTree = "<group>"; };
+		9020B1DF1BE48B560089176C /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		9020B1E21BE4931F0089176C /* MusicView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MusicView.xib; sourceTree = "<group>"; };
+		9020B1E41BE4933E0089176C /* MusicView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +63,41 @@
 			isa = PBXGroup;
 			children = (
 				9020B1CB1BE487650089176C /* AppDelegate.swift */,
-				9020B1CD1BE487650089176C /* ViewController.swift */,
+				9020B1DD1BE487B40089176C /* iTunesConnection.swift */,
+				9020B1E61BE4935B0089176C /* View */,
+				9020B1E11BE48B5E0089176C /* Model */,
+				9020B1E71BE4A17E0089176C /* Controller */,
 				9020B1CF1BE487650089176C /* Main.storyboard */,
 				9020B1D21BE487650089176C /* Assets.xcassets */,
 				9020B1D41BE487650089176C /* LaunchScreen.storyboard */,
 				9020B1D71BE487650089176C /* Info.plist */,
 			);
 			path = MusicSearch;
+			sourceTree = "<group>";
+		};
+		9020B1E11BE48B5E0089176C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9020B1DF1BE48B560089176C /* Album.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		9020B1E61BE4935B0089176C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9020B1E21BE4931F0089176C /* MusicView.xib */,
+				9020B1E41BE4933E0089176C /* MusicView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		9020B1E71BE4A17E0089176C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9020B1CD1BE487650089176C /* ViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,6 +160,7 @@
 			files = (
 				9020B1D61BE487650089176C /* LaunchScreen.storyboard in Resources */,
 				9020B1D31BE487650089176C /* Assets.xcassets in Resources */,
+				9020B1E31BE4931F0089176C /* MusicView.xib in Resources */,
 				9020B1D11BE487650089176C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,8 +172,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9020B1DE1BE487B40089176C /* iTunesConnection.swift in Sources */,
 				9020B1CE1BE487650089176C /* ViewController.swift in Sources */,
+				9020B1E51BE4933E0089176C /* MusicView.swift in Sources */,
 				9020B1CC1BE487650089176C /* AppDelegate.swift in Sources */,
+				9020B1E01BE48B560089176C /* Album.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +326,7 @@
 				9020B1DC1BE487650089176C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

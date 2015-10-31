@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MusicView" customModule="MusicSearch" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="250"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZO3-gx-1T6">
+                    <rect key="frame" x="23" y="42" width="100" height="100"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="Xbr-Bd-Jq5"/>
+                        <constraint firstAttribute="height" constant="100" id="qWv-NG-nCd"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Artist:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g26-Fx-ij9">
+                    <rect key="frame" x="23" y="158" width="46.5" height="20.5"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C4q-Qt-gKg">
+                    <rect key="frame" x="81" y="158" width="511" height="20.5"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Genre:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rdk-ml-tdS">
+                    <rect key="frame" x="19" y="186" width="51" height="20.5"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fi-MM-qWU">
+                    <rect key="frame" x="81" y="186" width="511" height="20.5"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B6u-Y9-px8">
+                    <rect key="frame" x="143" y="60" width="438" height="63"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="63" id="ell-3g-I7s"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="B6u-Y9-px8" firstAttribute="centerY" secondItem="ZO3-gx-1T6" secondAttribute="centerY" id="2a1-L8-dXN"/>
+                <constraint firstItem="Rdk-ml-tdS" firstAttribute="top" secondItem="g26-Fx-ij9" secondAttribute="bottom" constant="8" id="45C-Gx-43X"/>
+                <constraint firstItem="g26-Fx-ij9" firstAttribute="top" secondItem="ZO3-gx-1T6" secondAttribute="bottom" constant="16" id="KF6-s7-SvT"/>
+                <constraint firstItem="ZO3-gx-1T6" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="23" id="KlM-O1-Usp"/>
+                <constraint firstItem="9fi-MM-qWU" firstAttribute="leading" secondItem="Rdk-ml-tdS" secondAttribute="trailing" constant="11" id="OOi-60-2lM"/>
+                <constraint firstItem="C4q-Qt-gKg" firstAttribute="leading" secondItem="g26-Fx-ij9" secondAttribute="trailing" constant="11" id="Q92-y6-vwD"/>
+                <constraint firstItem="B6u-Y9-px8" firstAttribute="leading" secondItem="ZO3-gx-1T6" secondAttribute="trailing" constant="20" id="Rhk-wA-y0L"/>
+                <constraint firstItem="g26-Fx-ij9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="23" id="WBz-ZZ-eja"/>
+                <constraint firstAttribute="trailing" secondItem="9fi-MM-qWU" secondAttribute="trailing" constant="8" id="XJu-2P-z38"/>
+                <constraint firstItem="C4q-Qt-gKg" firstAttribute="centerY" secondItem="g26-Fx-ij9" secondAttribute="centerY" id="asw-u9-Qqy"/>
+                <constraint firstAttribute="trailing" secondItem="B6u-Y9-px8" secondAttribute="trailing" constant="19" id="bxH-w9-cWD"/>
+                <constraint firstAttribute="trailing" secondItem="C4q-Qt-gKg" secondAttribute="trailing" constant="8" id="dIM-Is-oHS"/>
+                <constraint firstItem="ZO3-gx-1T6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="42" id="eZz-6O-vzq"/>
+                <constraint firstItem="9fi-MM-qWU" firstAttribute="centerY" secondItem="Rdk-ml-tdS" secondAttribute="centerY" id="sQw-V4-Utc"/>
+                <constraint firstItem="Rdk-ml-tdS" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="19" id="uo5-pY-njW"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="artistLabel" destination="C4q-Qt-gKg" id="87y-Bc-JeE"/>
+                <outlet property="artworkImageView" destination="ZO3-gx-1T6" id="lLZ-lk-Yvi"/>
+                <outlet property="genreLabel" destination="9fi-MM-qWU" id="Inm-DN-iGY"/>
+                <outlet property="titleLabel" destination="B6u-Y9-px8" id="4YR-Jy-lRz"/>
+            </connections>
+            <point key="canvasLocation" x="490" y="553"/>
+        </view>
+    </objects>
+</document>
